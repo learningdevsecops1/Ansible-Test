@@ -1,6 +1,8 @@
 - name:
   hosts: web
   become: yes
+  vars:
+    myvar: "Hello World"
   tasks:
     - name : print variable
       ansible.builtin.debug:
