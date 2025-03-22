@@ -26,6 +26,7 @@
 
 - name : PLAY2
   hosts: local
+  become: yes
   connection: local
   tasks:
     - name: Install Nginx
