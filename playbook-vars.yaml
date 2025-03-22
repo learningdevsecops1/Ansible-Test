@@ -6,5 +6,7 @@
     nam : "Chintu"
   tasks:
     - name : print variable
+      vars:
+        nam : "Aryan"
       ansible.builtin.debug:
         msg: " Printing Statement for {{ nam }}: {{ myvar }}"
