@@ -6,4 +6,4 @@
   tasks:
     - name : print variable
       ansible.builtin.debug:
-        msg: "{{ myvar }}""
+        msg: " Printing Statement : {{ myvar }}"
