@@ -1,0 +1,56 @@
+- name : PLAY1
+  hosts: local
+  connection: local
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+    - name: Start Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+    - name: Stop Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: stopped
+    - name: Restart Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
+    - name: Enable Nginx
+      ansible.builtin.service:
+        name: nginx
+        enabled: yes
+
+- name : PLAY2
+  hosts: local
+  connection: local
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+    - name: Start Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+    - name: Stop Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: stopped
+    - name: Restart Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
+    - name: Enable Nginx
+      ansible.builtin.service:
+        name: nginx
+        enabled: yes
+    - name : Install Apache
+      ansible.builtin.package:
+        name: apache2
+        state: present
+    - name : debug
+      ansible.builtin.debug:
+        msg: "Hello World"
