@@ -1,6 +1,7 @@
 - name : PLAY1
   hosts: local
   connection: local
+  become: yes
   tasks:
     - name: Install Nginx
       ansible.builtin.package:
