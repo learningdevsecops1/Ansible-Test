@@ -3,7 +3,8 @@
   become: yes
   vars:
     myvar: "Hello World"
+    name : "Chintu"
   tasks:
     - name : print variable
       ansible.builtin.debug:
-        msg: " Printing Statement : {{ myvar }}"
+        msg: " Printing Statement for {{ name }}: {{ myvar }}"
