@@ -49,10 +49,6 @@
       ansible.builtin.service:
         name: nginx
         enabled: yes
-    - name : Install Apache
-      ansible.builtin.package:
-        name: apache2
-        state: present
     - name : debug
       ansible.builtin.debug:
         msg: "Hello World"

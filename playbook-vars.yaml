@@ -1,0 +1,7 @@
+- name:
+  hosts: web
+  become: yes
+  tasks:
+    - name : print variable
+      ansible.builtin.debug:
+        msg: "{{ myvar }}""
