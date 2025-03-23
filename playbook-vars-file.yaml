@@ -7,7 +7,7 @@
   vars_prompt:
     - name: yourname
       prompt: "Enter the yourname"
-      private: no  
+      private: false  
   tasks:
     - name: print variable
       ansible.builtin.debug:
