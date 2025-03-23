@@ -4,7 +4,11 @@
   vars_files:
     - vars.yaml
     - vars1.yaml
+  vars_prompt:
+    - name: yourname
+      prompt: "Enter the yourname"
+      private: no  
   tasks:
     - name: print variable
       ansible.builtin.debug:
-        msg: " Printing Statement for {{ nam }}: {{ myvar }} + {{ val }}"
+        msg: " Printing Statement for {{ nam }}: {{ myvar }} + {{ val }} + {{ yourname }}"
