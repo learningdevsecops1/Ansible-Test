@@ -3,7 +3,8 @@
   become: yes
   vars_files:
     - vars.yaml
+    - vars1.yaml
   tasks:
     - name: print variable
       ansible.builtin.debug:
-        msg: " Printing Statement for {{ nam }}: {{ myvar }}"
+        msg: " Printing Statement for {{ nam }}: {{ myvar }} + {{ val }}"
