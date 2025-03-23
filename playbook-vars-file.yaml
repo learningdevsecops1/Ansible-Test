@@ -14,4 +14,4 @@
   tasks:
     - name: print variable
       ansible.builtin.debug:
-        msg: " Printing Statement for {{ nam }}: {{ myvar }} + {{ val }} + {{ yourname }}"
+        msg: " Printing Statement for {{ nam }}: {{ myvar }} + {{ vals }} + {{ yourname }}"
