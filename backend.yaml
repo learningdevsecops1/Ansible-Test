@@ -43,4 +43,14 @@
   - name: copy backend service file
     ansible.builtin.copy:
       src: backend.service
-      dest: /etc/systemd/system/expense-backend.service
+      dest: /etc/systemd/system/backend.service
+  
+  - name: import mysql data
+    community.mysql.mysql_db:
+      name: expense
+      state: import
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: mysql.learningdevsecops.store
+      target: /app/schema/expense.sql
+  
