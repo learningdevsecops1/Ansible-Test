@@ -2,6 +2,11 @@
   hosts: frontend
   become: yes
   tasks:
+  - name: unistall nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: absent 
+
   - name: install nginx server
     ansible.builtin.dnf:
       name: nginx
