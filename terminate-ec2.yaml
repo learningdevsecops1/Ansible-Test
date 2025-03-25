@@ -1,0 +1,13 @@
+- name: terminate ec2 instances
+  connection: local
+  hosts: localhost
+  vars:
+    instances:
+      - frontend
+      - backend
+  tasks:
+  - name: Terminate ec2 instances
+    amazon.aws.ec2_instance:
+      state: absent
+      name: "{{ item }}"
+    loop: "{{ instances }}"
