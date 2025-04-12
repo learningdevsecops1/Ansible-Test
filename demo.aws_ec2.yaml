@@ -1,13 +1,12 @@
 plugin: amazon.aws.aws_ec2
-# This is a demo playbook for the amazon.aws_ec2 plugin
-# It demonstrates how to use the plugin to create an EC2 instance
-# in AWS and then terminate it
 regions:
   - us-east-1
 filters:
   tag:Name: nginx
-  instance-state-name: running
+  instance-state-name : running
 hostnames:
+  # You can also specify a list in order of precedence for hostname variables.
   - private-ip-address
 compose:
-  ansible_host: private-ip-address 
+  # This sets the `ansible_host` variable to connect with the private IP address without changing the hostname.
+  ansible_host: private_ip_address
